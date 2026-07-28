@@ -14,6 +14,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     CommonHeader: typeof import('./../components/common-header/index.vue')['default']
     Loading: typeof import('./../components/loading/index.vue')['default']
+    Message: typeof import('./../components/message/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Toast: typeof import('./../components/toast/index.vue')['default']
@@ -24,6 +25,7 @@ declare module 'vue' {
 declare global {
   const CommonHeader: typeof import('./../components/common-header/index.vue')['default']
   const Loading: typeof import('./../components/loading/index.vue')['default']
+  const Message: typeof import('./../components/message/index.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
   const Toast: typeof import('./../components/toast/index.vue')['default']

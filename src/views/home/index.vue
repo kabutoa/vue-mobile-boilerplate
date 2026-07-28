@@ -1,5 +1,16 @@
 <script lang="ts" setup>
 import { getUserInfo } from '@/api'
+import { useConfigStore } from '@/stores'
+
+const { setLoading, setMessage } = useConfigStore()
+
+const onShowLoading = () => {
+  setLoading({ mask: true, visible: true })
+}
+
+const onShowMessage = () => {
+  setMessage({ text: 'Hello, world!', type: 'info', visible: true })
+}
 
 const onGetUserInfo = async () => {
   const res = await getUserInfo()
@@ -10,6 +21,8 @@ const onGetUserInfo = async () => {
 <template>
   <div class="home">
     <h1>Home</h1>
+    <button @click="onShowLoading">Show Loading</button>
+    <button @click="onShowMessage">Show Message</button>
     <button @click="onGetUserInfo">Get User Info</button>
   </div>
 </template>

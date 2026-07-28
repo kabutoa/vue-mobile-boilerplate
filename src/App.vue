@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useConfigStore } from '@/stores'
 
-const { loading } = storeToRefs(useConfigStore())
+const { loading, message } = storeToRefs(useConfigStore())
 </script>
 
 <template>
@@ -9,7 +9,8 @@ const { loading } = storeToRefs(useConfigStore())
     <CommonHeader />
     <RouterView />
   </div>
-  <Loading :visible="loading.visible" :mask="loading.mask" />
+  <Loading v-bind="loading" />
+  <Message v-bind="message" />
 </template>
 
 <style scoped></style>
