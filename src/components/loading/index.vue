@@ -1,13 +1,12 @@
 <script setup lang="ts">
 // Vue 3.5+ 直接解构
-const { mask, text, visible } = defineProps<{
+const { mask, visible } = defineProps<{
   mask: boolean
-  text: string
   visible: boolean
 }>()
 
 // 旧版本解构
-// const { mask, text, visible } = toRefs(props)
+// const { mask, visible } = toRefs(props)
 </script>
 
 <template>
@@ -20,7 +19,6 @@ const { mask, text, visible } = defineProps<{
     >
       <div class="loading-indicator">
         <span class="loading-spinner" aria-hidden="true" />
-        <span class="loading-text">{{ text }}</span>
       </div>
     </div>
   </Teleport>
@@ -49,11 +47,6 @@ const { mask, text, visible } = defineProps<{
     border-top-color: currentColor;
     border-radius: 50%;
     animation: loading-spin 0.7s linear infinite;
-  }
-
-  &-text {
-    font-size: 14px;
-    line-height: 1.5;
   }
 
   @keyframes loading-spin {

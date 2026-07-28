@@ -12,7 +12,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 import { name } from './package.json'
 
 // https://vite.dev/config/
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ command, mode }) => {
   const env = loadEnv(mode, process.cwd(), '') as unknown as ImportMetaEnv
 
   const {
@@ -24,7 +24,7 @@ export default defineConfig(({ mode }) => {
     VITE_ENABLE_MOCK,
   } = env
 
-  const isProd = mode === 'production'
+  const isBuild = command === 'build'
 
   const baseConfig: UserConfig = {
     css: {
@@ -82,7 +82,7 @@ export default defineConfig(({ mode }) => {
     },
   }
 
-  if (!isProd) {
+  if (!isBuild) {
     return mergeConfig(baseConfig, {
       preview: {
         host: true,

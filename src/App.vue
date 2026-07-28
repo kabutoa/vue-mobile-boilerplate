@@ -9,7 +9,7 @@ const { loading } = storeToRefs(useConfigStore())
     <CommonHeader />
     <RouterView />
   </div>
-  <Loading :visible="loading.visible" :mask="loading.mask" :text="loading.text" />
+  <Loading :visible="loading.visible" :mask="loading.mask" />
 </template>
 
 <style scoped></style>

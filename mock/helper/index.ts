@@ -64,8 +64,8 @@ export const formatSize = (size: number): string => {
 
 export function getResponse(data) {
   const initialResponse = {
-    code: 'SUCCESS',
     msg: '',
+    status: 'success',
   }
   return {
     ...initialResponse,
