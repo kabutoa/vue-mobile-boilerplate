@@ -43,3 +43,4 @@ __screenshots__/
 
 src/typings/auto-imports.d.ts
 src/typings/components.d.ts
+.eslintrc-auto-import.json
