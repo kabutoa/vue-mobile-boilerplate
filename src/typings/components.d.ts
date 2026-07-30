@@ -17,7 +17,6 @@ declare module 'vue' {
     Message: typeof import('./../components/message/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    Toast: typeof import('./../components/toast/index.vue')['default']
   }
 }
 
@@ -28,5 +27,4 @@ declare global {
   const Message: typeof import('./../components/message/index.vue')['default']
   const RouterLink: typeof import('vue-router')['RouterLink']
   const RouterView: typeof import('vue-router')['RouterView']
-  const Toast: typeof import('./../components/toast/index.vue')['default']
 }

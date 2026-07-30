@@ -14,7 +14,7 @@ const onShowMessage = () => {
 
 const onGetUserInfo = async () => {
   const res = await getUserInfo()
-  console.log(res)
+  console.log(res.name)
 }
 </script>
 
