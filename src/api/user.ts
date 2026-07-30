@@ -1,4 +1,4 @@
-import service from '@/utils/request'
+import request from '@/utils/request'
 
 interface IUserInfo {
   created_at: string
@@ -10,4 +10,9 @@ interface IUserInfo {
   updated_at: string
 }
 
-export const getUserInfo = () => service.get<IUserInfo>('/me', { loading: false })
+export const getUserInfo = () =>
+  request<IUserInfo>({
+    mask: false,
+    method: 'get',
+    url: '/me',
+  })
