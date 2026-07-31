@@ -108,6 +108,9 @@ importers:
       lint-staged:
         specifier: ^17.0.8
         version: 17.0.8
+      npm-check-updates:
+        specifier: ^23.0.0
+        version: 23.0.0
       npm-run-all2:
         specifier: ^9.0.2
         version: 9.0.2
@@ -2412,6 +2415,11 @@ packages:
 
   nostics@1.1.4:
     resolution: {integrity: sha512-U4FApICSLCQ0dYiN59pxUCEZC053palQXi57yLaNdMaL6TBY4C4q3qZrJKUGcor2dGv8EhEwt8y5KvU2bo2kFg==}
+
+  npm-check-updates@23.0.0:
+    resolution: {integrity: sha512-B7dvnnS4Tm/4YQghXjBgGBDuHsk88hqCmr4ZuCr0nscsPzf/QVMls5mT8ZUcHrcrFRBP1afB2KNuJo8Px55DrA==}
+    engines: {node: ^22.22.2 || ^24.15.0 || >=26.0.0, npm: '>=10.0.0'}
+    hasBin: true
 
   npm-normalize-package-bin@6.0.0:
     resolution: {integrity: sha512-tdt4aFn9QamlhdN3HV2D2ccpBwO5/fyjjbXUxYA6uBjyekMZcZvDq0aSj9t5Jo+tih6AYFnt/cuIRn9013e0Uw==}
@@ -5633,6 +5641,8 @@ snapshots:
       abbrev: 2.0.0
 
   nostics@1.1.4: {}
+
+  npm-check-updates@23.0.0: {}
 
   npm-normalize-package-bin@6.0.0: {}
 

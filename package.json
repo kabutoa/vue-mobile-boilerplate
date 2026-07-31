@@ -38,7 +38,8 @@
     "lint:eslint": "eslint . --fix --cache",
     "format": "prettier --write --experimental-cli src/",
     "prepare": "husky",
-    "commit": "cz"
+    "commit": "cz",
+    "check-update": "ncu -u"
   },
   "dependencies": {
     "@iconify/json": "^2.2.500",
@@ -76,6 +77,7 @@
     "jiti": "^2.7.0",
     "jsdom": "^29.1.1",
     "lint-staged": "^17.0.8",
+    "npm-check-updates": "^23.0.0",
     "npm-run-all2": "^9.0.2",
     "oxlint": "~1.69.0",
     "prettier": "3.8.4",
